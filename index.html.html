@@ -1,438 +1,489 @@
-
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Transformative Weight Loss VSL</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta name="description" content="Protocolo de 30 dias para perda de peso sem dietas ou academia. Desbloqueie por $79!">
+    <meta name="keywords" content="perda de peso, protocolo, queima de gordura">
+    <meta property="og:title" content="Protocolo Transformador de Perda de Peso">
+    <meta property="og:description" content="Transforme seu corpo e mente em 30 dias. Apenas $79!">
+    <meta property="og:image" content="/images/thumbnail.jpg">
+    <meta property="og:url" content="https://seusite.com">
+    <link rel="canonical" href="https://seusite.com">
+    <link rel="icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://scripts.converteai.net https://www.googletagmanager.com; style-src 'self' https://fonts.googleapis.com https://cdnjs.cloudflare.com; img-src 'self' data:; font-src https://fonts.gstatic.com;">
+    <title>Protocolo Transformador de Perda de Peso</title>
     <style>
-        body {
+        :root {
+            --cor-primaria: #28a745;
+            --cor-secundaria: #e53e3e;
+            --cor-texto: #f7fafc;
+            --fundo-escuro: #1a202c;
+            --fundo-card: #2d3748;
+            --espaco-sm: 10px;
+            --espaco-md: 15px;
+        }
+
+        * {
             margin: 0;
             padding: 0;
-            font-family: 'Montserrat', sans-serif;
-            background-color: #1a202c;
-            color: #f7fafc;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Montserrat', 'Arial', sans-serif;
+            background: var(--fundo-escuro);
+            color: var(--cor-texto);
             line-height: 1.5;
             overflow-x: hidden;
         }
+
         .vsl-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 15px;
+            padding: var(--espaco-md);
             text-align: center;
             display: flex;
             flex-direction: column;
-            gap: 0;
+            gap: var(--espaco-md);
         }
-        .vsl-header {
-            margin: 0;
-            padding: 0;
-        }
+
         .vsl-header h1 {
             font-size: 1.6em;
             font-weight: 700;
-            margin: 0 0 20px;
-            line-height: 1.2;
-            background: #e53e3e;
+            margin-bottom: var(--espaco-md);
+            background: var(--cor-secundaria);
             padding: 5px 10px;
-            display: inline-block;
             border-radius: 5px;
-            color: #fff;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
-        .vsl-header p {
+
+        .subheadline {
             font-weight: 700;
             max-width: 90%;
             margin: 0 auto;
             color: #e2e8f0;
-            display: inline-block;
-            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
         }
-        .vsl-header .subheadline-first {
+
+        .subheadline-first {
             font-size: 1.2em;
-            background: #28a745;
+            background: var(--cor-primaria);
             padding: 5px 10px;
             border-radius: 5px;
-            margin-bottom: 20px;
+            margin-bottom: var(--espaco-md);
         }
-        .vsl-header .subheadline-second {
-            font-size: 1.0em; /* Tamanho menor para o terceiro subtítulo */
+
+        .subheadline-second {
+            font-size: 1em;
             font-family: 'Roboto', sans-serif;
-            margin-bottom: 0;
             animation: subtleGlow 3s ease-in-out infinite;
         }
+
         @keyframes subtleGlow {
             0% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.1); }
             50% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); }
             100% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.1); }
         }
+
         .vsl-video {
             position: relative;
             width: 100%;
             padding-top: 56.25%;
-            margin: 20px 0 0;
-            padding: 0;
         }
-        #vid_683c925aab52f134ab3243f2 {
-            width: 100%;
-            height: 100%;
+
+        .video-player {
             position: absolute;
             top: 0;
             left: 0;
+            width: 100%;
+            height: 100%;
         }
-        .vsl-urgency-fixed {
+
+        .video-thumbnail {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .video-error {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1em;
+        }
+
+        .vsl-urgency {
             background: #000;
-            color: #fff;
-            padding: 10px;
-            margin-top: 10px;
-            margin-bottom: 10px;
+            padding: var(--espaco-sm);
             font-size: 0.9em;
-            font-family: 'Arial', sans-serif; /* Fonte típica de noticiários */
-            position: relative;
+            font-family: 'Arial', sans-serif;
+            position: sticky;
+            top: 0;
+            z-index: 100;
             text-align: left;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra para efeito de TV */
-            border: 2px solid #fff; /* Borda branca como em noticiários */
+            border: 2px solid var(--cor-texto);
             border-radius: 5px;
-            overflow: hidden;
         }
-        .vsl-urgency-fixed::after {
+
+        .vsl-urgency::after {
             content: '';
             position: absolute;
             bottom: 0;
             left: 0;
             width: 100%;
             height: 5px;
-            background: #e53e3e; /* Barra vermelha inferior típica de noticiários */
-            animation: ticker 3s infinite linear; /* Efeito de movimento sutil */
+            background: var(--cor-secundaria);
+            animation: ticker 3s infinite linear;
         }
+
         @keyframes ticker {
             0% { transform: translateX(-100%); }
             100% { transform: translateX(100%); }
         }
-        .vsl-cta-video, .vsl-hidden-section {
-            display: none;
-        }
-        .vsl-before-after, .vsl-cta, .vsl-offer, .vsl-guarantee, .vsl-final-push, .vsl-confidence, .vsl-what-you-get {
-            margin-bottom: 15px;
-        }
+
         .before-after-container {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: var(--espaco-sm);
         }
-        .before-after-item a img {
+
+        .before-after-item img {
             width: 100%;
-            height: auto;
             border-radius: 8px;
             opacity: 0;
             animation: fadeIn 1s forwards;
-            animation-delay: 0.2s;
             transition: transform 0.3s ease;
         }
-        .before-after-item a img:hover {
+
+        .before-after-item img:hover {
             transform: scale(1.02);
         }
+
+        .before-after-item figcaption {
+            font-size: 0.9em;
+            margin: var(--espaco-sm) 0;
+        }
+
         @keyframes fadeIn {
             0% { opacity: 0; transform: translateY(10px); }
             100% { opacity: 1; transform: translateY(0); }
         }
-        .before-after-item p {
-            font-size: 0.9em;
-            margin: 5px 0;
-        }
-        .vsl-cta a, .vsl-cta-video a {
-            display: inline-block;
-            padding: 15px 30px;
-            background-color: #28a745;
-            color: #fff;
+
+        .cta-button {
+            display: inline-flex;
+            align-items: center;
+            padding: var(--espaco-md) calc(var(--espaco-md) * 2);
+            background: var(--cor-primaria);
+            color: var(--cor-texto);
             text-decoration: none;
             font-size: 1.1em;
             font-weight: 600;
             border-radius: 25px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             transition: transform 0.3s ease;
-            display: flex;
-            align-items: center;
-            justify-content: center;
         }
-        .vsl-cta a.pulse, .vsl-cta-video a.pulse {
-            animation: pulseGlow 2s infinite;
+
+        .cta-button:hover, .cta-button:focus {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
         }
-        .vsl-cta a i, .vsl-cta-video a i {
+
+        .cta-button i {
             margin-right: 8px;
             animation: iconBounce 1.5s infinite;
         }
+
         @keyframes iconBounce {
             0% { transform: translateY(0); }
             50% { transform: translateY(-3px); }
             100% { transform: translateY(0); }
         }
-        .vsl-cta a:hover, .vsl-cta-video a:hover {
-            transform: translateY(-2px);
+
+        .pulse {
+            animation: pulseGlow 2s infinite;
         }
-        .vsl-offer, .vsl-guarantee, .vsl-final-push, .vsl-confidence, .vsl-what-you-get {
-            background: #2d3748;
-            padding: 15px;
+
+        @keyframes pulseGlow {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        .vsl-what-you-get, .vsl-offer, .vsl-guarantee, .vsl-final-push, .vsl-confidence {
+            background: var(--fundo-card);
+            padding: var(--espaco-md);
             border-radius: 10px;
+            margin-bottom: var(--espaco-md);
             opacity: 0;
             animation: bounceIn 0.8s ease-out forwards;
-            box-shadow: 0 4px 12px rgba(104, 211, 145, 0.15);
         }
-        .vsl-offer { animation-delay: 0.1s; }
-        .vsl-guarantee { animation-delay: 0.2s; }
-        .vsl-final-push { animation-delay: 0.3s; }
-        .vsl-confidence { animation-delay: 0.4s; }
-        .vsl-offer h2 {
-            font-size: 1.3em;
-            margin-bottom: 10px;
-        }
-        .vsl-offer h2 span.strikethrough {
-            text-decoration: line-through;
-            color: #a0aec0;
-        }
-        .vsl-guarantee h2, .vsl-final-push h2, .vsl-what-you-get h2 {
-            font-size: 1.2em;
-            margin-bottom: 10px;
-        }
-        .vsl-what-you-get div {
+
+        .vsl-what-you-get li {
             display: flex;
             align-items: center;
-            justify-content: center;
             gap: 8px;
-            margin-bottom: 10px;
+            margin-bottom: var(--espaco-sm);
             background: rgba(255, 255, 255, 0.05);
             padding: 8px;
             border-radius: 5px;
-            box-shadow: 0 4px 12px rgba(104, 211, 145, 0.05);
-            opacity: 0;
-            animation: bounceIn 0.8s ease-out forwards, bgGlow 3s infinite;
         }
-        .vsl-what-you-get div:nth-child(1) { animation-delay: 0.1s; }
-        .vsl-what-you-get div:nth-child(2) { animation-delay: 0.2s; }
-        .vsl-what-you-get div:nth-child(3) { animation-delay: 0.3s; }
-        .vsl-what-you-get div:nth-child(4) { animation-delay: 0.4s; }
-        .vsl-what-you-get div:nth-child(5) { animation-delay: 0.5s; }
-        .vsl-what-you-get div:nth-child(6) { animation-delay: 0.6s; }
-        .vsl-what-you-get div:nth-child(7) { animation-delay: 0.7s; }
+
         @keyframes bounceIn {
-            0% { opacity: 0; transform: scale(0.9) translateY(20px); }
-            60% { opacity: 1; transform: scale(1.05) translateY(-5px); }
-            100% { opacity: 1; transform: scale(1) translateY(0); }
+            0% { opacity: 0; transform: scale(0.9); }
+            60% { opacity: 1; transform: scale(1.05); }
+            100% { opacity: 1; transform: scale(1); }
         }
-        @keyframes bgGlow {
-            0% { background: rgba(255, 255, 255, 0.05); }
-            50% { background: rgba(255, 255, 255, 0.1); }
-            100% { background: rgba(255, 255, 255, 0.05); }
-        }
+
         .vsl-floating-cta {
-            display: none;
             position: fixed;
-            bottom: 20px;
+            bottom: var(--espaco-md);
             left: 50%;
             transform: translateX(-50%);
             z-index: 1000;
-            background-color: #28a745;
+            background: var(--cor-primaria);
             padding: 12px 25px;
             border-radius: 25px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             transition: opacity 0.3s ease;
         }
-        .vsl-floating-cta a {
-            color: #fff;
-            text-decoration: none;
-            font-size: 1em;
-            font-weight: 600;
-            display: flex;
+
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 2000;
             align-items: center;
+            justify-content: center;
         }
-        .vsl-floating-cta a.pulse {
-            animation: pulseGlow 2s infinite;
+
+        .modal-content {
+            background: var(--fundo-card);
+            padding: var(--espaco-md);
+            border-radius: 10px;
+            text-align: center;
+            max-width: 500px;
+            width: 90%;
+            animation: slideIn 0.5s ease-out;
         }
-        .vsl-floating-cta a i {
-            margin-right: 8px;
-            animation: iconBounce 1.5s infinite;
+
+        .modal-content h2 {
+            font-size: 1.5em;
+            margin-bottom: var(--espaco-md);
         }
-        @keyframes pulseGlow {
-            0% { transform: scale(1); box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); }
-            50% { transform: scale(1.05); box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); }
-            100% { transform: scale(1); box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); }
+
+        .modal-content button {
+            padding: 10px 20px;
+            background: var(--cor-primaria);
+            border: none;
+            color: var(--cor-texto);
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
         }
+
+        @keyframes slideIn {
+            0% { transform: translateY(-50px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 1; }
+        }
+
+        .cta-button:focus {
+            outline: 2px solid var(--cor-primaria);
+            outline-offset: 2px;
+        }
+
         @media (min-width: 768px) {
-            .vsl-header h1 {
-                font-size: 2.2em;
-            }
-            .vsl-header .subheadline-first {
-                font-size: 1.4em;
-                max-width: 80%;
-            }
-            .vsl-header .subheadline-second {
-                font-size: 1.1em; /* Tamanho ainda menor para telas grandes */
-                max-width: 80%;
-            }
-            .before-after-container {
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
-            .before-after-item {
-                width: 45%;
-            }
-            .vsl-cta a, .vsl-cta-video a {
-                padding: 18px 40px;
-                font-size: 1.2em;
-            }
-            .vsl-floating-cta a {
-                padding: 15px 30px;
-                font-size: 1.1em;
-            }
+            .vsl-header h1 { font-size: 2.2em; }
+            .subheadline-first { font-size: 1.4em; max-width: 80%; }
+            .before-after-container { flex-direction: row; flex-wrap: wrap; justify-content: center; }
+            .before-after-item { width: 45%; }
+            .cta-button { padding: 18px 40px; font-size: 1.2em; }
+        }
+
+        @media (max-width: 480px) {
+            .vsl-header h1 { font-size: 1.4em; }
+            .subheadline-first { font-size: 1em; }
+            .cta-button { font-size: 0.9em; padding: 10px 20px; }
         }
     </style>
 </head>
 <body>
-    <div class="vsl-container">
-        <!-- Headline and Subheadline -->
-        <div class="vsl-header">
-            <h1>They make billions from your failure.</h1>
-            <p class="subheadline-first">But now… you're about to uncover the protocol they tried to hide from the world.</p>
-            <p class="subheadline-second">A strategic 30-day plan to free your body, mind, and life — no crazy diets, no gym, no yo-yo effect.</p>
-        </div>
+    <main class="vsl-container">
+        <header class="vsl-header">
+            <h1>Eles lucram bilhões com seu fracasso.</h1>
+            <p class="subheadline subheadline-first">Mas agora… você está prestes a descobrir o protocolo que tentaram esconder.</p>
+            <p class="subheadline subheadline-second">Um plano de 30 dias para libertar seu corpo e mente — sem dietas ou academia.</p>
+        </header>
 
-        <!-- Main Video -->
-        <div class="vsl-video">
-            <div id="vid_683c925aab52f134ab3243f2" style="position: relative; width: 100%; padding: 56.25% 0 0;">
-                <img id="thumb_683c925aab52f134ab3243f2" src="https://images.converteai.net/2abc4c73-0fc2-4cd5-b04e-92b0bc04cd20/players/683c925aab52f134ab3243f2/thumbnail.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block;" alt="thumbnail">
-                <div id="backdrop_683c925aab52f134ab3243f2" style=" -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); position: absolute; top: 0; height: 100%; width: 100%; "></div>
+        <section class="vsl-video" aria-label="Vídeo de apresentação">
+            <div id="vid_683c925aab52f134ab3243f2" class="video-player">
+                <img class="video-thumbnail" src="https://images.converteai.net/2abc4c73-0fc2-4cd5-b04e-92b0bc04cd20/players/683c925aab52f134ab3243f2/thumbnail.jpg" alt="Thumbnail do vídeo do protocolo" loading="lazy">
+                <div class="video-error" hidden>Erro ao carregar o vídeo.</div>
             </div>
-            <script type="text/javascript" id="scr_683c925aab52f134ab3243f2">
-                var s=document.createElement("script"); s.src="https://scripts.converteai.net/2abc4c73-0fc2-4cd5-b04e-92b0bc04cd20/players/683c925aab52f134ab3243f2/player.js", s.async=!0,document.head.appendChild(s);
-            </script>
-        </div>
+        </section>
 
-        <!-- Fixed Urgency Notice Below Video (Estilo de noticiário) -->
-        <div class="vsl-urgency-fixed">
-            <p>⚠️ BREAKING NEWS: This page may go offline at any moment. What you’re seeing here disrupts the industry. It’s not sold in pharmacies. It’s not promoted on TV commercials. It’s not pushed by influencers. And that’s exactly why it works.</p>
-        </div>
+        <section class="vsl-urgency" aria-label="Aviso de urgência">
+            <p>⚠️ NOTÍCIA URGENTE: Esta página pode sair do ar a qualquer momento. Desafie a indústria agora!</p>
+        </section>
 
-        <!-- CTA Button Below Video -->
-        <div class="vsl-cta-video" id="cta-video">
-            <a href="#your-destination-url" class="pulse"><i class="fas fa-unlock"></i> 🔓 YES, I WANT TO UNLOCK THE PROTOCOL NOW</a>
-        </div>
+        <section class="vsl-cta vsl-cta-video" id="cta-video" hidden>
+            <a href="#comprar" class="cta-button pulse" data-ga-event="click_cta_video"><i class="fas fa-unlock" aria-hidden="true"></i> 🔓 DESBLOQUEAR PROTOCOLO</a>
+        </section>
 
-        <!-- Hidden Section (appears at 5:13) -->
-        <div class="vsl-hidden-section" id="hidden-section">
-            <!-- Before and After -->
+        <section class="vsl-hidden-section" id="hidden-section" hidden>
             <div class="vsl-before-after">
-                <h2>📸 Real results. Everyday people.</h2>
+                <h2>📸 Resultados reais. Pessoas comuns.</h2>
                 <div class="before-after-container">
-                    <div class="before-after-item">
-                        <a href="https://ibb.co/dJwhn3xw"><img src="https://i.ibb.co/DgHq36TH/before-after-2.png" alt="before-after-2" border="0" /></a>
-                        <p>“I was tired of diets that didn’t work.” — Marcos, 52, Florida, USA (Lost 26 lbs)</p>
-                    </div>
-                    <div class="before-after-item">
-                        <a href="https://ibb.co/GvJCtmZK"><img src="https://i.ibb.co/hRM2Z0GP/before-after-6.png" alt="before-after-6" border="0" /></a>
-                        <p>“I got my energy and confidence back.” — Marcos, 52, Florida, USA</p>
-                    </div>
-                    <div class="before-after-item">
-                        <a href="https://ibb.co/yms7DZDN"><img src="https://i.ibb.co/qL1VzczD/before-after-1.png" alt="before-after-1" border="0" /></a>
-                        <p>“I didn’t believe I could change.” — Roberto, 48, Texas, USA (Lost 30 lbs)</p>
-                    </div>
-                    <div class="before-after-item">
-                        <a href="https://ibb.co/JjPb2gP0"><img src="https://i.ibb.co/wh1bCj13/before-after-3.png" alt="before-after-3" border="0" /></a>
-                        <p>“I feel renewed and stronger.” — Roberto, 48, Texas, USA</p>
-                    </div>
-                    <div class="before-after-item">
-                        <a href="https://ibb.co/rfyhbDb3"><img src="https://i.ibb.co/Z1TrHqHS/before-after-5.png" alt="before-after-5" border="0" /></a>
-                        <p>“I was ashamed of my body.” — Sandra, 47, California, USA (Lost 22 lbs)</p>
-                    </div>
-                    <div class="before-after-item">
-                        <a href="https://ibb.co/gbtT6h3s"><img src="https://i.ibb.co/JWr7CgKX/before-after-4.png" alt="before-after-4" border="0" /></a>
-                        <p>“I lost weight without starving.” — Sandra, 47, California, USA</p>
-                    </div>
-                    <div class="before-after-item">
-                        <a href="https://ibb.co/XZNHbgL3"><img src="https://i.ibb.co/fYBJ25Fn/Brenda-Barros-4.jpg" alt="Brenda-Barros-4" border="0" /></a>
-                        <p>“I wanted to feel good again.” — Elaine, 61, New York, USA (Lost 18 lbs)</p>
-                    </div>
-                    <div class="before-after-item">
-                        <a href="https://ibb.co/ksR9tm2F"><img src="https://i.ibb.co/ZpnY02zC/Ex-obesa-brasiliense-conta-como-foi-perder-mais-de-50-kg-Renasci-1.jpg" alt="Ex-obesa-brasiliense-conta-como-foi-perder-mais-de-50-kg-Renasci-1" border="0" /></a>
-                        <p>“I can wear clothes I haven’t worn in years.” — Elaine, 61, New York, USA</p>
-                    </div>
+                    <figure class="before-after-item">
+                        <a href="#antes-depois" aria-label="Transformação de Marcos">
+                            <img src="/images/before-after-1.jpg" alt="Transformação de Marcos, 52 anos, perdeu 12kg" loading="lazy">
+                        </a>
+                        <figcaption>“Cansado de dietas que não funcionam.” — Marcos, 52, EUA</figcaption>
+                    </figure>
+                    <!-- Adicione mais imagens localmente -->
                 </div>
             </div>
 
-            <!-- Main CTA Button -->
             <div class="vsl-cta">
-                <a href="#your-destination-url" class="pulse"><i class="fas fa-unlock"></i> 🔓 YES, I WANT TO UNLOCK THE PROTOCOL NOW</a>
+                <a href="#comprar" class="cta-button pulse" data-ga-event="click_cta_main"><i class="fas fa-unlock" aria-hidden="true"></i> 🔓 DESBLOQUEAR PROTOCOLO</a>
             </div>
 
-            <!-- What You’ll Unlock -->
             <div class="vsl-what-you-get">
-                <h2>🎁 What you’ll unlock today:</h2>
-                <div><span>🍽️</span> A meal plan that triggers fat burning</div>
-                <div><span>🏋️‍♀️</span> Smart movement (at home or at the gym)</div>
-                <div><span>🧠</span> Daily mental rituals to reprogram your mind</div>
-                <div><span>📖</span> Strategic metabolic recipe book</div>
-                <div><span>📊</span> Step-by-step visual guides</div>
-                <div><span>✅</span> Daily progress checklists</div>
-                <div><span>🗓️</span> Complete 30-day structure, guided day by day</div>
-                <p>Everything is delivered inside a premium membership platform, with instant access after purchase. You’ll also get a visual 30-day roadmap, so you know exactly what to do at each stage — no confusion, no guesswork, no getting lost.</p>
+                <h2>🎁 O que você desbloqueia:</h2>
+                <ul>
+                    <li><span>🍽️</span> Plano alimentar para queima de gordura</li>
+                    <li><span>🏋️‍♀️</span> Movimentos inteligentes</li>
+                    <li><span>🧠</span> Rituais mentais diários</li>
+                </ul>
             </div>
 
-            <!-- Offer -->
             <div class="vsl-offer">
-                <h2>💰 From <span class="strikethrough">$297</span> to just $79.00</h2>
-                <p>Lifetime access. Today’s price is symbolic — just enough to keep this protocol online and available for more people. You’re not buying a product. You’re investing in your freedom.</p>
+                <h2>💰 De <span class="strikethrough">$297</span> por $79</h2>
+                <p>Acesso vitalício. Invista na sua liberdade.</p>
             </div>
+        </section>
+    </main>
 
-            <!-- Guarantee -->
-            <div class="vsl-guarantee">
-                <h2>🔒 Transformation Guarantee — 7 Days</h2>
-                <p>You can test the protocol for a week. If you don’t feel any transformation in your body or energy, just let us know, and we’ll refund 100% of your money. No questions. No hassle.</p>
-            </div>
+    <footer class="vsl-floating-cta" id="floating-cta" hidden>
+        <a href="#comprar" class="cta-button pulse" data-ga-event="click_cta_floating"><i class="fas fa-unlock" aria-hidden="true"></i> 🔓 COMPRAR AGORA</a>
+    </footer>
 
-            <!-- Final Push -->
-            <div class="vsl-final-push">
-                <h2>🚀 This is your moment.</h2>
-                <p>This isn’t just about losing weight. It’s about waking up with energy. Feeling good in your own body. Looking in the mirror with pride. Reclaiming your self-esteem, your confidence, your freedom. Hundreds of everyday people have already transformed. Now… it’s your turn.</p>
-            </div>
-
-            <!-- Confidence Notice -->
-            <div class="vsl-confidence">
-                <p>🛡️ <strong>Confidence Notice:</strong> This protocol isn’t promoted on commercials, social media, or celebrities. It challenges the profits of the traditional weight loss industry — that’s why it remains exclusive. And access may go offline at any moment.</p>
-            </div>
+    <div class="modal" id="purchase-modal">
+        <div class="modal-content">
+            <h2>Confirmar Compra</h2>
+            <p>Você está a um passo de transformar sua vida com o protocolo de 30 dias! Clique abaixo para prosseguir.</p>
+            <button onclick="completePurchase()">Confirmar</button>
+            <button onclick="closeModal()">Cancelar</button>
         </div>
     </div>
 
-    <!-- Floating CTA Button -->
-    <div class="vsl-floating-cta" id="floating-cta">
-        <a href="#your-destination-url" class="pulse"><i class="fas fa-unlock"></i> 🔓 BUY NOW</a>
-    </div>
-
     <script>
-        // Delay to display sections and buttons (5min 13s = 313s)
-        const delayInSeconds = 313;
+        // Google Analytics (substitua UA-XXXXX-Y pelo seu ID)
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-XXXXX-Y', 'auto');
+        ga('send', 'pageview');
+
+        // Inicialização
+        document.documentElement.classList.add('js-enabled');
+
+        // Carregar vídeo
+        const loadVideo = () => {
+            const script = document.createElement('script');
+            script.src = 'https://scripts.converteai.net/2abc4c73-0fc2-4cd5-b04e-92b0bc04cd20/players/683c925aab52f134ab3243f2/player.js';
+            script.async = true;
+            script.onerror = () => document.querySelector('.video-error').hidden = false;
+            document.head.appendChild(script);
+        };
+        window.addEventListener('load', loadVideo);
+
+        // Exibir seções após 5:13
         setTimeout(() => {
-            document.getElementById('hidden-section').style.display = 'block';
-            document.getElementById('cta-video').style.display = 'block';
-            document.getElementById('floating-cta').style.display = 'block';
-        }, delayInSeconds * 1000);
-
-        // Hide floating CTA when hovering over purchase buttons
-        const ctaVideo = document.getElementById('cta-video');
-        const ctaMain = document.querySelector('.vsl-cta');
-        const floatingCta = document.getElementById('floating-cta');
-
-        [ctaVideo, ctaMain].forEach(element => {
-            element.addEventListener('mouseover', () => {
-                floatingCta.style.opacity = '0';
-                floatingCta.style.pointerEvents = 'none';
+            ['hidden-section', 'cta-video', 'floating-cta'].forEach(id => {
+                const el = document.getElementById(id);
+                if (el) el.hidden = false;
             });
-            element.addEventListener('mouseout', () => {
-                floatingCta.style.opacity = '1';
-                floatingCta.style.pointerEvents = 'auto';
+        }, 313000);
+
+        // Gerenciar CTA flutuante
+        const debounce = (func, wait) => {
+            let timeout;
+            return (...args) => {
+                clearTimeout(timeout);
+                timeout = setTimeout(() => func(...args), wait);
+            };
+        };
+
+        const toggleFloatingCta = debounce((opacity, pointerEvents) => {
+            const floatingCta = document.getElementById('floating-cta');
+            if (floatingCta) {
+                floatingCta.style.opacity = opacity;
+                floatingCta.style.pointerEvents = pointerEvents;
+            }
+        }, 100);
+
+        ['cta-video', 'vsl-cta'].forEach(cls => {
+            const el = document.querySelector(`.${cls}`);
+            if (el) {
+                el.addEventListener('mouseenter', () => toggleFloatingCta('0', 'none'));
+                el.addEventListener('mouseleave', () => toggleFloatingCta('1', 'auto'));
+                el.addEventListener('focusin', () => toggleFloatingCta('0', 'none'));
+                el.addEventListener('focusout', () => toggleFloatingCta('1', 'auto'));
+            }
+        });
+
+        // Modal de compra
+        const modal = document.getElementById('purchase-modal');
+        const ctaButtons = document.querySelectorAll('.cta-button');
+        ctaButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                modal.style.display = 'flex';
+                // Rastrear clique no GA
+                const event = btn.dataset.gaEvent;
+                if (event && window.ga) ga('send', 'event', 'CTA', 'click', event);
             });
         });
+
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+
+        function completePurchase() {
+            window.location.href = 'https://seusite.com/comprar';
+        }
+
+        // Schema.org
+        const schema = {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": "Protocolo Transformador de Perda de Peso",
+            "description": "Plano de 30 dias para perda de peso.",
+            "offers": {
+                "@type": "Offer",
+                "price": "79.00",
+                "priceCurrency": "USD",
+                "availability": "https://schema.org/InStock"
+            }
+        };
+        const script = document.createElement('script');
+        script.type = 'application/ld+json';
+        script.textContent = JSON.stringify(schema);
+        document.head.appendChild(script);
     </script>
+</body>
 </html>
