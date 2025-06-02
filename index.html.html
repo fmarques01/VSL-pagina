@@ -470,7 +470,7 @@
 
         <!-- CTA Button Below Video -->
         <div class="vsl-cta-video" id="cta-video">
-            <a href="#your-destination-url" class="pulse"><i class="fas fa-unlock"></i> 🔓 YES, I WANT TO UNLOCK THE PROTOCOL NOW</a>
+            <a href="https://go.perfectpay.com.br/PPU38CPPSKF" class="pulse"><i class="fas fa-unlock"></i> 🔓 YES, I WANT TO UNLOCK THE PROTOCOL NOW</a>
         </div>
 
         <!-- Hidden Section (appears at 5:13) -->
@@ -572,7 +572,7 @@
 
             <!-- Main CTA Button -->
             <div class="vsl-cta">
-                <a href="#your-destination-url" class="pulse"><i class="fas fa-unlock"></i> 🔓 YES, I WANT TO UNLOCK THE PROTOCOL NOW</a>
+                <a href="https://go.perfectpay.com.br/PPU38CPPSKF" class="pulse"><i class="fas fa-unlock"></i> 🔓 YES, I WANT TO UNLOCK THE PROTOCOL NOW</a>
             </div>
 
             <!-- What You’ll Unlock -->
@@ -590,7 +590,7 @@
 
             <!-- Offer -->
             <div class="vsl-offer">
-                <h2>💰 From <span class="strikethrough">$297</span> to just $79.00</h2>
+                <h2>💰 From <span class="strikethrough">$297</span> to just $79.90</h2>
                 <p>Lifetime access. Today’s price is symbolic — just enough to keep this protocol online and available for more people. You’re not buying a product. You’re investing in your freedom.</p>
             </div>
 
@@ -615,13 +615,15 @@
 
     <!-- Floating CTA Button -->
     <div class="vsl-floating-cta" id="floating-cta" style="display: none;">
-        <a href="#your-destination-url" class="pulse"><i class="fas fa-unlock"></i> 🔓 BUY NOW</a>
+        <a href="https://go.perfectpay.com.br/PPU38CPPSKF" class="pulse"><i class="fas fa-unlock"></i> 🔓 BUY NOW</a>
     </div>
 
     <script>
-        // Ensure floating CTA is initially hidden
+        // Ensure floating CTA and hidden section are initially hidden
         document.getElementById('floating-cta').style.display = 'none';
-        console.log("Floating CTA initially hidden");
+        document.getElementById('hidden-section').style.display = 'none';
+        document.getElementById('cta-video').style.display = 'none';
+        console.log("Floating CTA, depoimentos, and buttons initially hidden");
 
         // Delay to display sections and buttons (5min 13s = 313s)
         const delayInSeconds = 313;
@@ -629,7 +631,8 @@
             document.getElementById('hidden-section').style.display = 'block';
             document.getElementById('cta-video').style.display = 'block';
             document.getElementById('floating-cta').style.display = 'block';
-            console.log("Floating CTA displayed after 313 seconds");
+            console.log("Depoimentos displayed after 313 seconds");
+            console.log("Floating CTA and buttons displayed after 313 seconds");
         }, delayInSeconds * 1000);
 
         // Hide floating CTA when hovering over purchase buttons
