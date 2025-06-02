@@ -37,11 +37,12 @@
             margin: 0 0 20px;
             line-height: 1.2;
             background: #e53e3e;
-            padding: 4px 8px;
+            padding: 5px 10px;
             display: inline-block;
             border-radius: 5px;
             color: #fff;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            animation: subtleGlow 3s ease-in-out infinite;
         }
         .vsl-header p {
             font-weight: 700;
@@ -59,6 +60,7 @@
             border-radius: 5px;
             margin-bottom: 20px;
             line-height: 1.2;
+            animation: subtleGlow 3s ease-in-out infinite;
         }
         .vsl-header .subheadline-second {
             font-size: 0.9em;
@@ -77,7 +79,13 @@
             width: 100%;
             padding-top: 56.25%;
             margin: 200px 0 0;
-            padding: 0;
+            padding: 10px 5px;
+            border: 4px solid #28a745;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(40, 167, 69, 0.5);
+            background: #1a202c;
+            box-sizing: border-box;
+            animation: subtleGlow 3s ease-in-out infinite;
         }
         #vid_683c925aab52f134ab3243f2 {
             width: 100%;
@@ -124,7 +132,13 @@
         .before-after-container {
             display: flex;
             flex-direction: column;
-            gap: 10px;
+            gap: 15px;
+        }
+        .before-after-item {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 4px 12px rgba(104, 211, 145, 0.1);
         }
         .before-after-item a img {
             width: 100%;
@@ -145,36 +159,75 @@
         .before-after-item p {
             font-size: 0.9em;
             margin: 5px 0;
+            font-style: italic;
+            color: #d1d5db;
+            text-align: center;
+        }
+        .before-after-item .rating {
+            margin-top: 5px;
+            text-align: center;
+        }
+        .before-after-item .rating i {
+            color: #f1c40f;
+            font-size: 14px;
+            margin: 0 2px;
+            text-shadow: 0 0 5px rgba(241, 196, 15, 0.5);
+            transition: transform 0.3s ease;
+            animation: starGlow 2s ease-in-out infinite;
+        }
+        .before-after-item .rating i:hover {
+            transform: scale(1.2);
+        }
+        @keyframes starGlow {
+            0% { text-shadow: 0 0 5px rgba(241, 196, 15, 0.5); }
+            50% { text-shadow: 0 0 10px rgba(241, 196, 15, 0.8); }
+            100% { text-shadow: 0 0 5px rgba(241, 196, 15, 0.5); }
         }
         .vsl-cta a, .vsl-cta-video a {
             display: inline-block;
-            padding: 15px 30px;
-            background-color: #28a745;
+            padding: 15px 35px;
+            background: linear-gradient(45deg, #28a745, #34d058);
             color: #fff;
             text-decoration: none;
-            font-size: 1.1em;
-            font-weight: 600;
+            font-size: 1.2em;
+            font-weight: 700;
             border-radius: 25px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            transition: transform 0.3s ease;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: flex;
             align-items: center;
             justify-content: center;
+            position: relative;
+            animation: pulseGlow 2s infinite;
         }
         .vsl-cta a.pulse, .vsl-cta-video a.pulse {
-            animation: pulseGlow 2s infinite;
+            animation: pulseGlow 2s infinite, gradientGlow 3s ease-in-out infinite;
         }
         .vsl-cta a i, .vsl-cta-video a i {
             margin-right: 8px;
-            animation: iconBounce 1.5s infinite;
+            font-size: 1.2em;
+            animation: iconBounce 1.5s ease-in-out infinite;
+        }
+        .vsl-cta a:hover, .vsl-cta-video a:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.8);
         }
         @keyframes iconBounce {
             0% { transform: translateY(0); }
             50% { transform: translateY(-3px); }
             100% { transform: translateY(0); }
         }
-        .vsl-cta a:hover, .vsl-cta-video a:hover {
-            transform: translateY(-2px);
+        @keyframes pulseGlow {
+            0% { transform: scale(1); box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); }
+            50% { transform: scale(1.03); box-shadow: 0 8px 20px rgba(40, 167, 69, 0.6); }
+            100% { transform: scale(1); box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); }
+        }
+        @keyframes gradientGlow {
+            0% { background: linear-gradient(45deg, #28a745, #34d058); }
+            50% { background: linear-gradient(45deg, #34d058, #28a745); }
+            100% { background: linear-gradient(45deg, #28a745, #34d058); }
         }
         .vsl-offer, .vsl-guarantee, .vsl-final-push, .vsl-confidence, .vsl-what-you-get {
             background: #2d3748;
@@ -234,34 +287,45 @@
             display: none;
             position: fixed;
             bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
+            left: 50% !important;
+            transform: translateX(-50%) !important;
+            width: fit-content;
+            margin: 0 auto;
             z-index: 1000;
-            background-color: #28a745;
+            background: linear-gradient(45deg, #28a745, #34d058);
             padding: 12px 25px;
             border-radius: 25px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            transition: opacity 0.3s ease;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: pulseGlow 2s infinite, gradientGlow 3s ease-in-out infinite;
         }
         .vsl-floating-cta a {
             color: #fff;
             text-decoration: none;
             font-size: 1em;
-            font-weight: 600;
+            font-weight: 700;
             display: flex;
             align-items: center;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+            margin: 0 auto;
+            text-align: center;
         }
         .vsl-floating-cta a.pulse {
-            animation: pulseGlow 2s infinite;
+            animation: pulseGlow 2s infinite, gradientGlow 3s ease-in-out infinite;
         }
         .vsl-floating-cta a i {
             margin-right: 8px;
-            animation: iconBounce 1.5s infinite;
+            font-size: 1.2em;
+            animation: iconBounce 1.5s ease-in-out infinite;
         }
-        @keyframes pulseGlow {
-            0% { transform: scale(1); box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); }
-            Player 1: 50% { transform: scale(1.05); box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); }
-            100% { transform: scale(1); box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); }
+        .vsl-floating-cta:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.8);
         }
         @media (min-width: 768px) {
             .vsl-header h1 {
@@ -291,6 +355,9 @@
                 padding: 15px 30px;
                 font-size: 1.1em;
             }
+            .vsl-floating-cta a i {
+                font-size: 1.2em;
+            }
         }
         @media (max-width: 480px) {
             .vsl-container {
@@ -313,22 +380,35 @@
             }
             .vsl-video {
                 margin-top: 108px;
+                padding: 5px 3px;
+                border: 3px solid #28a745;
             }
             .vsl-urgency-fixed {
                 font-size: 0.8em;
                 padding: 8px;
                 margin-top: 83px;
             }
+            .before-after-item {
+                padding: 8px;
+            }
+            .before-after-item .rating i {
+                font-size: 12px;
+            }
             .vsl-cta a, .vsl-cta-video a {
-                font-size: 0.9em;
-                padding: 10px 20px;
+                padding: 12px 25px;
+                font-size: 1em;
+            }
+            .vsl-cta a i, .vsl-cta-video a i {
+                font-size: 1em;
             }
             .vsl-floating-cta {
-                bottom: 10px;
                 padding: 10px 20px;
             }
             .vsl-floating-cta a {
                 font-size: 0.9em;
+            }
+            .vsl-floating-cta a i {
+                font-size: 1em;
             }
         }
     </style>
@@ -372,34 +452,90 @@
                     <div class="before-after-item">
                         <a href="https://ibb.co/dJwhn3xw"><img src="https://i.ibb.co/DgHq36TH/before-after-2.png" alt="before-after-2" border="0" /></a>
                         <p>“I was tired of diets that didn’t work.” — Marcos, 52, Florida, USA (Lost 26 lbs)</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
                     </div>
                     <div class="before-after-item">
                         <a href="https://ibb.co/GvJCtmZK"><img src="https://i.ibb.co/hRM2Z0GP/before-after-6.png" alt="before-after-6" border="0" /></a>
                         <p>“I got my energy and confidence back.” — Marcos, 52, Florida, USA</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
                     </div>
                     <div class="before-after-item">
                         <a href="https://ibb.co/yms7DZDN"><img src="https://i.ibb.co/qL1VzczD/before-after-1.png" alt="before-after-1" border="0" /></a>
                         <p>“I didn’t believe I could change.” — Roberto, 48, Texas, USA (Lost 30 lbs)</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
                     </div>
                     <div class="before-after-item">
                         <a href="https://ibb.co/JjPb2gP0"><img src="https://i.ibb.co/wh1bCj13/before-after-3.png" alt="before-after-3" border="0" /></a>
                         <p>“I feel renewed and stronger.” — Roberto, 48, Texas, USA</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
                     </div>
                     <div class="before-after-item">
                         <a href="https://ibb.co/rfyhbDb3"><img src="https://i.ibb.co/Z1TrHqHS/before-after-5.png" alt="before-after-5" border="0" /></a>
                         <p>“I was ashamed of my body.” — Sandra, 47, California, USA (Lost 22 lbs)</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
                     </div>
                     <div class="before-after-item">
                         <a href="https://ibb.co/gbtT6h3s"><img src="https://i.ibb.co/JWr7CgKX/before-after-4.png" alt="before-after-4" border="0" /></a>
                         <p>“I lost weight without starving.” — Sandra, 47, California, USA</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
                     </div>
                     <div class="before-after-item">
                         <a href="https://ibb.co/XZNHbgL3"><img src="https://i.ibb.co/fYBJ25Fn/Brenda-Barros-4.jpg" alt="Brenda-Barros-4" border="0" /></a>
                         <p>“I wanted to feel good again.” — Elaine, 61, New York, USA (Lost 18 lbs)</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
                     </div>
                     <div class="before-after-item">
                         <a href="https://ibb.co/ksR9tm2F"><img src="https://i.ibb.co/ZpnY02zC/Ex-obesa-brasiliense-conta-como-foi-perder-mais-de-50-kg-Renasci-1.jpg" alt="Ex-obesa-brasiliense-conta-como-foi-perder-mais-de-50-kg-Renasci-1" border="0" /></a>
                         <p>“I can wear clothes I haven’t worn in years.” — Elaine, 61, New York, USA</p>
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -448,17 +584,22 @@
     </div>
 
     <!-- Floating CTA Button -->
-    <div class="vsl-floating-cta" id="floating-cta">
+    <div class="vsl-floating-cta" id="floating-cta" style="display: none;">
         <a href="#your-destination-url" class="pulse"><i class="fas fa-unlock"></i> 🔓 BUY NOW</a>
     </div>
 
     <script>
+        // Ensure floating CTA is initially hidden
+        document.getElementById('floating-cta').style.display = 'none';
+        console.log("Floating CTA initially hidden");
+
         // Delay to display sections and buttons (5min 13s = 313s)
         const delayInSeconds = 313;
         setTimeout(() => {
             document.getElementById('hidden-section').style.display = 'block';
             document.getElementById('cta-video').style.display = 'block';
             document.getElementById('floating-cta').style.display = 'block';
+            console.log("Floating CTA displayed after 313 seconds");
         }, delayInSeconds * 1000);
 
         // Hide floating CTA when hovering over purchase buttons
