@@ -24,11 +24,12 @@
             text-align: center;
             display: flex;
             flex-direction: column;
-            gap: 0;
+            gap: 15px;
         }
         .vsl-header {
             margin: 0;
             padding: 0;
+            margin-bottom: 30px;
         }
         .vsl-header h1 {
             font-size: 1.4em;
@@ -49,6 +50,7 @@
             color: #e2e8f0;
             display: inline-block;
             text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+            word-wrap: break-word;
         }
         .vsl-header .subheadline-first {
             font-size: 1em;
@@ -74,7 +76,7 @@
             position: relative;
             width: 100%;
             padding-top: 56.25%;
-            margin: 20px 0 0;
+            margin: 300px 0 0;
             padding: 0;
         }
         #vid_683c925aab52f134ab3243f2 {
@@ -88,7 +90,7 @@
             background: #000;
             color: #fff;
             padding: 10px;
-            margin-top: 10px;
+            margin-top: 300px;
             margin-bottom: 10px;
             font-size: 0.9em;
             font-family: 'Arial', sans-serif;
@@ -291,18 +293,42 @@
             }
         }
         @media (max-width: 480px) {
+            .vsl-container {
+                padding: 10px;
+                gap: 10px;
+            }
+            .vsl-header {
+                margin-bottom: 20px;
+            }
             .vsl-header h1 {
                 font-size: 1.2em;
+                margin: 0 0 15px;
             }
             .vsl-header .subheadline-first {
                 font-size: 0.9em;
+                margin-bottom: 15px;
             }
             .vsl-header .subheadline-second {
                 font-size: 0.8em;
             }
+            .vsl-video {
+                margin-top: 162px;
+            }
+            .vsl-urgency-fixed {
+                font-size: 0.8em;
+                padding: 8px;
+                margin-top: 156px;
+            }
             .vsl-cta a, .vsl-cta-video a {
                 font-size: 0.9em;
                 padding: 10px 20px;
+            }
+            .vsl-floating-cta {
+                bottom: 10px;
+                padding: 10px 20px;
+            }
+            .vsl-floating-cta a {
+                font-size: 0.9em;
             }
         }
     </style>
@@ -404,7 +430,7 @@
 
             <!-- Guarantee -->
             <div class="vsl-guarantee">
-                <h2>🔒 Transformation Guarantee — 7 Days</h2>
+                <h2>🔒 Transformation Guarantee — 7 Days</ nikt>
                 <p>You can test the protocol for a week. If you don’t feel any transformation in your body or energy, just let us know, and we’ll refund 100% of your money. No questions. No hassle.</p>
             </div>
 
