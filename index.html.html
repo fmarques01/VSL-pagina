@@ -78,7 +78,7 @@
             position: relative;
             width: 100%;
             padding-top: 56.25%;
-            margin: 200px 0 0;
+            margin: 70px 0 0;
             padding: 10px 5px;
             border: 4px solid #28a745;
             border-radius: 8px;
@@ -127,7 +127,7 @@
             display: none;
         }
         .vsl-before-after, .vsl-cta, .vsl-offer, .vsl-guarantee, .vsl-final-push, .vsl-confidence, .vsl-what-you-get {
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
         .before-after-container {
             display: flex;
@@ -230,28 +230,41 @@
             100% { background: linear-gradient(45deg, #28a745, #34d058); }
         }
         .vsl-offer, .vsl-guarantee, .vsl-final-push, .vsl-confidence, .vsl-what-you-get {
-            background: #2d3748;
-            padding: 15px;
+            background: linear-gradient(135deg, #2d3748, #1a202c);
+            padding: 20px;
             border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
             opacity: 0;
             animation: bounceIn 0.8s ease-out forwards;
-            box-shadow: 0 4px 12px rgba(104, 211, 145, 0.15);
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
         }
         .vsl-offer { animation-delay: 0.1s; }
         .vsl-guarantee { animation-delay: 0.2s; }
         .vsl-final-push { animation-delay: 0.3s; }
         .vsl-confidence { animation-delay: 0.4s; }
         .vsl-offer h2 {
-            font-size: 1.3em;
+            font-size: 1.5em;
+            font-weight: 800;
             margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
         }
         .vsl-offer h2 span.strikethrough {
             text-decoration: line-through;
             color: #a0aec0;
         }
+        .vsl-offer p {
+            line-height: 1.6;
+            color: #e2e8f0;
+        }
         .vsl-guarantee h2, .vsl-final-push h2, .vsl-what-you-get h2 {
-            font-size: 1.2em;
+            font-size: 1.5em;
+            font-weight: 800;
             margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+        }
+        .vsl-guarantee p, .vsl-final-push p, .vsl-what-you-get p, .vsl-confidence p {
+            line-height: 1.6;
+            color: #e2e8f0;
         }
         .vsl-what-you-get div {
             display: flex;
@@ -259,12 +272,17 @@
             justify-content: center;
             gap: 8px;
             margin-bottom: 10px;
-            background: rgba(255, 255, 255, 0.05);
-            padding: 8px;
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1));
+            padding: 12px;
             border-radius: 5px;
-            box-shadow: 0 4px 12px rgba(104, 211, 145, 0.05);
+            border-left: 4px solid #28a745;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
             opacity: 0;
             animation: bounceIn 0.8s ease-out forwards, bgGlow 3s infinite;
+        }
+        .vsl-what-you-get div span {
+            font-size: 1.2em;
+            margin-right: 10px;
         }
         .vsl-what-you-get div:nth-child(1) { animation-delay: 0.1s; }
         .vsl-what-you-get div:nth-child(2) { animation-delay: 0.2s; }
@@ -279,9 +297,9 @@
             100% { opacity: 1; transform: scale(1) translateY(0); }
         }
         @keyframes bgGlow {
-            0% { background: rgba(255, 255, 255, 0.05); }
-            50% { background: rgba(255, 255, 255, 0.1); }
-            100% { background: rgba(255, 255, 255, 0.05); }
+            0% { background: linear-gradient(45deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1)); }
+            50% { background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.05)); }
+            100% { background: linear-gradient(45deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.1)); }
         }
         .vsl-floating-cta {
             display: none;
@@ -379,7 +397,7 @@
                 font-size: 0.8em;
             }
             .vsl-video {
-                margin-top: 108px;
+                margin-top: 45px;
                 padding: 5px 3px;
                 border: 3px solid #28a745;
             }
@@ -399,6 +417,18 @@
                 font-size: 1em;
             }
             .vsl-cta a i, .vsl-cta-video a i {
+                font-size: 1em;
+            }
+            .vsl-offer, .vsl-guarantee, .vsl-final-push, .vsl-confidence, .vsl-what-you-get {
+                padding: 15px;
+            }
+            .vsl-offer h2, .vsl-guarantee h2, .vsl-final-push h2, .vsl-what-you-get h2 {
+                font-size: 1.3em;
+            }
+            .vsl-offer p, .vsl-guarantee p, .vsl-final-push p, .vsl-what-you-get p, .vsl-confidence p {
+                font-size: 0.9em;
+            }
+            .vsl-what-you-get div span {
                 font-size: 1em;
             }
             .vsl-floating-cta {
