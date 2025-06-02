@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Transformative Weight Loss VSL</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         body {
@@ -22,68 +22,58 @@
             margin: 0 auto;
             padding: 15px;
             text-align: center;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
         }
         .vsl-header {
-            margin-bottom: 20px; /* Increased to lower more on mobile */
+            margin: 0;
+            padding: 0;
         }
         .vsl-header h1 {
             font-size: 1.6em;
             font-weight: 700;
-            margin: 0 0 15px;
+            margin: 0 0 20px;
             line-height: 1.2;
-        }
-        .vsl-header h1 span.marked {
-            text-shadow: 2px 2px 4px rgba(40, 167, 69, 0.6);
-            animation: blink 1.5s infinite, glow 3s infinite;
-            background: linear-gradient(45deg, #28a745, #68d391);
-            -webkit-background-clip: text;
-            -moz-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            -moz-text-fill-color: transparent;
-        }
-        @keyframes glow {
-            0% { text-shadow: 2px 2px 4px rgba(40, 167, 69, 0.6); }
-            50% { text-shadow: 2px 2px 8px rgba(40, 167, 69, 0.9); }
-            100% { text-shadow: 2px 2px 4px rgba(40, 167, 69, 0.6); }
-        }
-        @keyframes blink {
-            0% { opacity: 1; }
-            50% { opacity: 0.8; }
-            100% { opacity: 1; }
+            background: #e53e3e;
+            padding: 5px 10px;
+            display: inline-block;
+            border-radius: 5px;
+            color: #fff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
         .vsl-header p {
-            font-size: 1.1em;
-            font-weight: 500;
+            font-weight: 700;
             max-width: 90%;
             margin: 0 auto;
             color: #e2e8f0;
-            position: relative;
             display: inline-block;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
         }
-        .vsl-header p span.marked {
-            text-shadow: 1px 1px 3px rgba(255, 255, 255, 0.3);
+        .vsl-header .subheadline-first {
+            font-size: 1.2em;
+            background: #28a745;
+            padding: 5px 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
         }
-        .vsl-header p::after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 1px;
-            bottom: -2px;
-            left: 0;
-            background: linear-gradient(to right, #68d391, #2d3748);
-            animation: underlineGrow 2s forwards;
+        .vsl-header .subheadline-second {
+            font-size: 1.0em; /* Tamanho menor para o terceiro subtítulo */
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 0;
+            animation: subtleGlow 3s ease-in-out infinite;
         }
-        @keyframes underlineGrow {
-            0% { width: 0; }
-            100% { width: 100%; }
+        @keyframes subtleGlow {
+            0% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.1); }
+            50% { box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); }
+            100% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.1); }
         }
         .vsl-video {
             position: relative;
             width: 100%;
             padding-top: 56.25%;
-            margin-top: 0px; /* Kept for natural spacing */
-            margin-bottom: 10px;
+            margin: 20px 0 0;
+            padding: 0;
         }
         #vid_683c925aab52f134ab3243f2 {
             width: 100%;
@@ -93,14 +83,36 @@
             left: 0;
         }
         .vsl-urgency-fixed {
-            background: #fefcbf;
-            color: #e53e3e;
+            background: #000;
+            color: #fff;
             padding: 10px;
+            margin-top: 10px;
             margin-bottom: 10px;
             font-size: 0.9em;
+            font-family: 'Arial', sans-serif; /* Fonte típica de noticiários */
+            position: relative;
+            text-align: left;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Sombra para efeito de TV */
+            border: 2px solid #fff; /* Borda branca como em noticiários */
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .vsl-urgency-fixed::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: #e53e3e; /* Barra vermelha inferior típica de noticiários */
+            animation: ticker 3s infinite linear; /* Efeito de movimento sutil */
+        }
+        @keyframes ticker {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
         }
         .vsl-cta-video, .vsl-hidden-section {
-            display: none; /* Appears at 5:13 */
+            display: none;
         }
         .vsl-before-after, .vsl-cta, .vsl-offer, .vsl-guarantee, .vsl-final-push, .vsl-confidence, .vsl-what-you-get {
             margin-bottom: 15px;
@@ -165,8 +177,8 @@
             padding: 15px;
             border-radius: 10px;
             opacity: 0;
-            animation: bounceIn 0.8s ease-out forwards; /* Bounce animation for new sections */
-            box-shadow: 0 4px 12px rgba(104, 211, 145, 0.15); /* More transparent shadow */
+            animation: bounceIn 0.8s ease-out forwards;
+            box-shadow: 0 4px 12px rgba(104, 211, 145, 0.15);
         }
         .vsl-offer { animation-delay: 0.1s; }
         .vsl-guarantee { animation-delay: 0.2s; }
@@ -193,9 +205,9 @@
             background: rgba(255, 255, 255, 0.05);
             padding: 8px;
             border-radius: 5px;
-            box-shadow: 0 4px 12px rgba(104, 211, 145, 0.05); /* Even more transparent shadow */
+            box-shadow: 0 4px 12px rgba(104, 211, 145, 0.05);
             opacity: 0;
-            animation: bounceIn 0.8s ease-out forwards, bgGlow 3s infinite; /* Bounce and glow animation */
+            animation: bounceIn 0.8s ease-out forwards, bgGlow 3s infinite;
         }
         .vsl-what-you-get div:nth-child(1) { animation-delay: 0.1s; }
         .vsl-what-you-get div:nth-child(2) { animation-delay: 0.2s; }
@@ -215,7 +227,7 @@
             100% { background: rgba(255, 255, 255, 0.05); }
         }
         .vsl-floating-cta {
-            display: none; /* Appears at 5:13 */
+            display: none;
             position: fixed;
             bottom: 20px;
             left: 50%;
@@ -251,8 +263,12 @@
             .vsl-header h1 {
                 font-size: 2.2em;
             }
-            .vsl-header p {
-                font-size: 1.3em;
+            .vsl-header .subheadline-first {
+                font-size: 1.4em;
+                max-width: 80%;
+            }
+            .vsl-header .subheadline-second {
+                font-size: 1.1em; /* Tamanho ainda menor para telas grandes */
                 max-width: 80%;
             }
             .before-after-container {
@@ -278,8 +294,9 @@
     <div class="vsl-container">
         <!-- Headline and Subheadline -->
         <div class="vsl-header">
-            <h1>🚫 They make <span class="marked">billions</span> from your failure. ✅ But now… you’re about to uncover the protocol they tried to <span class="marked">hide</span> from the world.</h1>
-            <p>A strategic <span class="marked">30-day plan</span> to free your body, mind, and life — <span class="marked">no crazy diets</span>, no gym, no yo-yo effect.</p>
+            <h1>They make billions from your failure.</h1>
+            <p class="subheadline-first">But now… you're about to uncover the protocol they tried to hide from the world.</p>
+            <p class="subheadline-second">A strategic 30-day plan to free your body, mind, and life — no crazy diets, no gym, no yo-yo effect.</p>
         </div>
 
         <!-- Main Video -->
@@ -293,9 +310,9 @@
             </script>
         </div>
 
-        <!-- Fixed Urgency Notice Below Video -->
+        <!-- Fixed Urgency Notice Below Video (Estilo de noticiário) -->
         <div class="vsl-urgency-fixed">
-            <p>⚠️ Important warning: This page may go offline at any moment. What you’re seeing here disrupts the industry. It’s not sold in pharmacies. It’s not promoted on TV commercials. It’s not pushed by influencers. And that’s exactly why it works.</p>
+            <p>⚠️ BREAKING NEWS: This page may go offline at any moment. What you’re seeing here disrupts the industry. It’s not sold in pharmacies. It’s not promoted on TV commercials. It’s not pushed by influencers. And that’s exactly why it works.</p>
         </div>
 
         <!-- CTA Button Below Video -->
@@ -417,5 +434,4 @@
             });
         });
     </script>
-</body>
 </html>
